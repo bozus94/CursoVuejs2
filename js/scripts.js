@@ -6,7 +6,7 @@ new Vue({
     },
     methods: {
         addTask: function () {
-            this.tasks.push({ task: this.newTask, completed: true });
+            this.tasks.push({ task: this.newTask, completed: false });
             this.newTask = '';
         }
     },
