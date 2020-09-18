@@ -1,63 +1,53 @@
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <link rel="stylesheet" href="css/main.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
-    <title>VueJS v2 | LISTAS</title>
-  </head>
-  <body>
-    <div id="appVue">
-      <div class="container-fluid">
-        <div class="row mt-5">
-          <div class="col-sm-4">
-            <h1 class="mb-4" v-if="tasks.length > 0">Agregar tarea</h1>
-            <h1 class="mb-4" v-else="tasks">Crear tarea</h1>
-            <input type="text" class="form-control" v-model="newTask" v-on:keyUp.enter="addTask" />
-          </div>
-          <div class="col-sm-7">
-            <h1 class="mb-4" v-if="tasks.length > 0">Listado de tareas</h1>
-            <h1 class="mb-4" v-else="tasks">No hay tareas registradas</h1>
-            <ul class="list-group">
-              <li
-                class="list-group-item text-capitalize"
-                v-for="item in tasks"
-                @click="item.completed = !item.completed"
-                v-bind:class="item.completed == true ? 'list-group-item-light' : ''"
-                v-text="item.task"
-              ></li>
-            </ul>
-          </div>
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>VueJS v2 | V-FOR</title>
+</head>
+
+<body>
+  <div id="appVue">
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-4">
+          <input type="text" v-model="name" v-on:keyup.enter="addName">
         </div>
-        <hr />
-        <div class="row">
-          <div class="col-12">
-            <pre>
-                {{ $data }}
-            </pre>
-          </div>
-        </div>
-        <div class="row">
-          <div class="row">
-            <div class="col-12 text-truncate">Praeterea iter est quasdam res quas ex communi.</div>
-          </div>
+        <div class="col-8">
+          <ul class="list-group">
+            <li v-for="item in people">
+              {{ item }}
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+      <hr>
+      <div class="row">
+        <div class="col-12">
+          <pre>
+              {{$data}}
+          </pre>
+        </div>
+      </div>
+      </div>
+  </div>
 
-    <!-- development version, includes helpful console warnings -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-    <script src="js/scripts.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Optional JavaScript -->
-  </body>
+  <script src="js/scripts.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Optional JavaScript -->
+</body>
+
 </html>

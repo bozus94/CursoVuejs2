@@ -1,13 +1,14 @@
 new Vue({
     el: '#appVue',
     data: {
-        tasks: [],
-        newTask: ''
+        people: ['Amanda', 'Natasha', 'Mario', 'lorezo'],
+        name: ''
     },
     methods: {
-        addTask: function () {
-            this.tasks.push({ task: this.newTask, completed: false });
-            this.newTask = '';
+        addName: function () {
+            this.people.push(this.name)
+            this.name = ""
         }
     },
 })
+

@@ -261,14 +261,10 @@ textarea {
   }
 }
 
-*, pre, p, span{
+pre, p, span, ul,li{
 color: #DBCBA7 !important;
 }
 
 body{
   background-color: #282A2C;
-}
-
-ul,li{
-  color: #090A0A;
 }
