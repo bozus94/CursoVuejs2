@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="css/main.css">
 
-  <title>VueJS v2 | V-FOR</title>
+  <title>VueJS v2 | V-BIND</title>
 </head>
 
 <body>
@@ -18,21 +18,17 @@
     <div class="container mt-3">
       <div class="row">
         <div class="col-4">
-          <input type="text" v-model="name" v-on:keyup.enter="addName">
+          <input type="text" v-model="info">
         </div>
         <div class="col-8">
-          <ul class="list-group">
-            <li v-for="item in people">
-              {{ item }}
-            </li>
-          </ul>
+          <p v-bind:title="info">Texto de relleno: {{ info }} </p>
         </div>
       </div>
       <hr>
       <div class="row">
-        <div class="col-12">
+        <div class="col ">
           <pre>
-              {{$data}}
+              {{ $data }}
           </pre>
         </div>
       </div>
