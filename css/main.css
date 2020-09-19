@@ -261,7 +261,7 @@ textarea {
   }
 }
 
-pre, p, span, ul,li{
+*{
 color: #DBCBA7 !important;
 }
 
