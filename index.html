@@ -18,14 +18,22 @@
     <div class="container mt-3">
       <div class="row">
           <div class="col-12">
-            <h2>suscribete a nuestro boletin </h2>
+            <template v-if="!message">
+                <h2 >Suscribete a nuestro boletin </h2>
+                <p>nuestro equipo se pondra en contacto en maximo 24 horas</p>
+                <p><em>Puedes comincarte por medio de nuestras redes sociales</em> </p>             
+            </template>
+            <h2 v-else>Presiona enviar </h2>
           </div>
           <div class="col-6">
-            <input type="text" class="form-control text-dark" v-model="email">
+            <textarea class="form-control text-dark" rows="2" v-model="message"></textarea>
           </div>
           <div class="col-3">
             <input type="submit" class="btn btn-primary text-white"
-            v-show="email">
+            v-show="message">
+          </div>
+          <div class="col-12 mt-3">
+            {{ $data }}
           </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ new Vue({
         this.getInfo();
     },
     data: {
-        email: ''
+        message: ''
     },
     methods: {
 
