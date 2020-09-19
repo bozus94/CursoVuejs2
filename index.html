@@ -10,38 +10,29 @@
 
   <link rel="stylesheet" href="css/main.css">
 
-  <title>VueJS v2 | V-BIND</title>
+  <title>VueJS v2 | V-SHOW</title>
 </head>
 
 <body>
   <div id="appVue">
     <div class="container mt-3">
       <div class="row">
-        <div class="col-sm-5">
-          <h2 class="mb-3">Lista vuejs-ajax</h2>
-          <ul class="list-group">
-            <li class="list-group-item text-dark" 
-            v-for="todo in todos"
-            v-bind:class="todo.completed == true ? 'list-group-item-secondary' : '' "
-            @click="todo.completed = !todo.completed">
-                {{ todo.title }}
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-7">
-           <h2 class="mb-3">AJAX</h2>
-            <pre>
-              {{ $data }}
-            </pre>
-        </div>
+          <div class="col-12">
+            <h2>suscribete a nuestro boletin </h2>
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control text-dark" v-model="email">
+          </div>
+          <div class="col-3">
+            <input type="submit" class="btn btn-primary text-white"
+            v-show="email">
+          </div>
       </div>
     </div>
   </div>
 
   <!-- development version, includes helpful console warnings -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
   <script src="js/scripts.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
